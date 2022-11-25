@@ -1,11 +1,11 @@
 
 services:
-  rails:
+  rails-snake:
     build: .
     tty: true
     ports:
-      - 3000:3000
+      - 3008:3000
     # Agrego un volumen para donde se guardara la pp de RoR, es necesario pues Docker es stateless
     # Docker no guarda informacion, cada vez que se reinicia vuelve todo desde cero
     volumes:
-      - ./src:/home/fundamentals
+      - ./app:/home/app
